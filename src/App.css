@@ -1,0 +1,238 @@
+/* Styling for the header container */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Styling for the logo */
+.logo img {
+  width: 100px; /* Adjust the width of the logo as needed */
+  margin-right: 10px;
+  padding: 10px;
+}
+
+/* Styling for the title */
+.title {
+  flex-grow: 1; /* Let the title take up remaining space */
+}
+
+.title h1 {
+  margin: 0;
+}
+
+
+/* Center the search box and button */
+.search-container {
+  text-align: center;
+  padding-top: 20px; /* Add top padding for visibility */
+  padding-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+  width: 70%; /* Set the width of the search input */
+  padding: 12px; /* Increase padding for better visibility */
+  font-size: 18px; /* Increase font size for better visibility */
+  border: 1px solid #ccc; /* Add a border to the input */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  margin-right: 10px; /* Add right margin for spacing */
+}
+
+.search-container button {
+  padding: 12px 20px; /* Increase padding for better visibility */
+  font-size: 18px; /* Increase font size for better visibility */
+  background-color: #007bff; /* Set background color of the button */
+  color: #fff; /* Set text color of the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.search-container button:hover {
+  background-color: #73b4fa;
+}
+
+
+/* RecipeList styling */
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* RecipeItem styling */
+.recipe-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-item img {
+  width: 50%;
+  border-radius: 5px;
+  margin: 5px 0px 5px 80px;
+  align-items: center;
+}
+
+.recipe-item h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recipe-item p {
+  margin: 0;
+  text-align: center;
+}
+
+.recipe-item .summary {
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  cursor: pointer; /* Set cursor to pointer */
+}
+
+/* Styling for expanded summary */
+.recipe-item .summary.expanded {
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Show full content */
+}
+
+/*Random Recipe Btn Styling*/
+.random-recipe-gen {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.random-recipe-gen:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+
+/* Modal container */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure modal is on top of other content */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  color: black;
+}
+
+.modal-content img {
+  width: 35%;
+  border-radius: 5px;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add some animation */
+.modal-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+.randomrecipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center
+}
+
+/*Wine Pairing*/
+.wine-pairing-container {
+  width: 950px;
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+.wine-pairing-header {
+  font-size: 24px; 
+  margin-bottom: 20px; 
+}
+
+.pairing-text {
+  margin-bottom: 10px; 
+}
+
+.paired-wines {
+  margin-bottom: 10px; 
+}
+
+.product-matches-header {
+  font-size: 20px; 
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+
+.product-match {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+.product-match h3 {
+  margin-bottom: 5px; 
+}
+
+.product-match img {
+  width: 300px; 
+  margin-top: 5px; 
+}
+
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
